@@ -11,7 +11,9 @@
   "license": "MIT",
   "files": [
     "index.js",
-    "LICENSE"
+    "templates",
+    "updatefile.js",
+    "utils.js"
   ],
   "main": "index.js",
   "engines": {
@@ -20,9 +22,6 @@
   "scripts": {
     "test": "mocha"
   },
-  "keywords": [
-    "generategenerator"
-  ],
   "dependencies": {
     "array-unique": "^0.3.2",
     "delete": "^0.3.2",
@@ -43,6 +42,13 @@
     "npm-install-global": "^0.1.2",
     "update": "^0.7.4"
   },
+  "keywords": [
+    "appveyor",
+    "update",
+    "updater",
+    "updater-appveyor",
+    "updateupdater"
+  ],
   "update": {
     "run": true
   },
