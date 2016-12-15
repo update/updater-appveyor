@@ -22,7 +22,7 @@ utils.updateEngine = function(engines, arr) {
   arr = arr.map(function(version) {
     if (utils.isNumericVersion(version)) {
       var v = utils.toSemver(version);
-      if (utils.semver.satisfies(v, engines)) {
+      if (utils.semver.gt(v, engines)) {
         return utils.semver.clean(v);
       }
       return false;
