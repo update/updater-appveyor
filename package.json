@@ -38,8 +38,38 @@
   },
   "devDependencies": {
     "copy": "^0.3.0",
+    "gulp-format-md": "^0.1.9",
     "mocha": "^3.2.0",
     "npm-install-global": "^0.1.2",
     "update": "^0.7.4"
+  },
+  "update": {
+    "run": true
+  },
+  "verb": {
+    "toc": {
+      "method": "preWrite"
+    },
+    "layout": "updater",
+    "tasks": [
+      "readme"
+    ],
+    "plugins": [
+      "gulp-format-md"
+    ],
+    "related": {
+      "list": [
+        "updater-editorconfig",
+        "updater-eslint",
+        "updater-license",
+        "updater-travis"
+      ]
+    },
+    "lint": {
+      "reflinks": true
+    },
+    "reflinks": [
+      "update"
+    ]
   }
 }
