@@ -116,7 +116,7 @@ function appveyorUpdate(app) {
   var opts = utils.extend({}, app.options);
 
   return utils.through.obj(function(file, enc, next) {
-    var engines = app.pkg.get('engines.node');
+    var engines = app.pkg.get('engines.node') || '0.10.0';
     var obj = utils.extend({}, defaults);
     // only pass in actual versions
     var arr = obj.environment.matrix.map(function(item) {
