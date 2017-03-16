@@ -1,0 +1,19 @@
+{
+  "name": "updater-appveyor-test-fixture",
+  "version": "0.1.0",
+  "homepage": "https://github.com/update/updater-appveyor-test-fixture",
+  "repository": "update/updater-appveyor-test-fixture",
+  "bugs": {
+    "url": "https://github.com/update/updater-appveyor-test-fixture/issues"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.10"
+  },
+  "keywords": [
+    "appveyor",
+    "fixture",
+    "test",
+    "updater"
+  ]
+}
