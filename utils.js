@@ -19,6 +19,7 @@ require('array-unique', 'unique');
 require = fn;
 
 utils.updateEngine = function(engines, arr) {
+  engines = utils.toSemver(engines);
   arr = arr.map(function(version) {
     if (utils.isNumericVersion(version)) {
       var v = utils.toSemver(version);
@@ -61,10 +62,11 @@ utils.isNumericVersion = function(str) {
   return /^[\s.\d]+$/.test(str);
 };
 
-utils.toSemver = function(str) {
-  var segs = str.trim().split('.');
-  while (segs.length < 3) segs.push('0');
-  return segs.join('.');
+utils.toSemver = function(version) {
+  version = version.replace(/^\D*|\D*$/g, '');
+  let increments = String(version).trim().split('.');
+  while (increments.length < 3) increments.push('0');
+  return increments.join('.');
 };
 
 utils.compressVersion = function(str) {

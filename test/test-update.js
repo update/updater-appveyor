@@ -12,7 +12,7 @@ var pkg = require('../package');
 var app;
 
 var dir = __dirname;
-var fixtures = path.resolve.bind(path, __dirname, 'fixtures', 'generate');
+var fixtures = path.resolve.bind(path, __dirname, 'fixtures', 'update');
 var actual = path.resolve.bind(path, __dirname, 'actual');
 
 function exists(name, re, cb) {
